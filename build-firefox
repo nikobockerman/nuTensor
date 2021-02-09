@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -xv
+set -e
+
+version() {
+  git describe --tags
+}
+
+./tools/make-firefox.sh "$(version)"
+
